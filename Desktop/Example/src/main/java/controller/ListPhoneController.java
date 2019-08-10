@@ -29,10 +29,10 @@ public class ListPhoneController extends HttpServlet {
             transaction = session.beginTransaction();
             System.out.println(transaction);
             session.save(Phones.Builder.aPhones()
-                    .withName("ok")
-                    .withBrand("ok")
-                    .withPrice("ok")
-                    .withDescription("ok")
+                    .withName(name)
+                    .withBrand(brand)
+                    .withPrice(price)
+                    .withDescription(description)
                     .build());
             transaction.commit();
         }catch (Exception ex){
